@@ -1,9 +1,11 @@
 const { dispatch, store, subscribe } = getApp()
 
+import click from '../../actions/click'
+
 Page({
   data: store.getState().home, 
 
-  bindViewTap: e => dispatch({type: 'ON_LOAD'}),
+  click,
   
   onLoad() {
     this.unsubscribe = subscribe(() => this.setData(store.getState().home))  
