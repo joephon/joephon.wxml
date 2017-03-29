@@ -3,7 +3,8 @@ import store from './store'
 const { dispatch, subscribe } = store
 
 App({
-  onLaunch: function () {
+  onLaunch() {
+    console.log('hello')
   },
   store,
   dispatch,

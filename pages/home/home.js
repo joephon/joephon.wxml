@@ -1,12 +1,11 @@
-const app = getApp()
-    , { dispatch, store, subscribe } = app
+const { dispatch, store, subscribe } = getApp()
 
 Page({
   data: store.getState().home, 
 
   bindViewTap: e => dispatch({type: 'ON_LOAD'}),
   
-  onLoad: function() {
+  onLoad() {
     this.unsubscribe = subscribe(() => this.setData(store.getState().home))  
   },
 })
