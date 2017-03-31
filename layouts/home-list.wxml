@@ -1,0 +1,17 @@
+<template name="home-list">
+    <view class="home-list">
+        <block wx:for="{{homeList}}" wx:key="{{index}}">
+            <view class="home-list-item">
+                <view class="home-list-item-left">
+                    <image class="home-list-item-avatar" src="/images/testMM.png" />
+                </view>
+                <view class="home-list-item-right">
+                    <view class="home-list-item-voice">
+                        <image class="home-list-item-voice-icon" src="/images/voice.png" />
+                        <text class="home-list-item-voice-duration">{{duration}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</template>

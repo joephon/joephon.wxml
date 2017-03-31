@@ -1,21 +1,85 @@
-/**index.wxss**/
-.userinfo {
+.home-top {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300rpx; 
+  box-shadow: 1px 1px 5px #eee;
+  background-color: #50e3c2;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.home-joephon-avatar {
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 50%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.home-top-name {
+  font-size: 22rpx;
+  color: #fff;
 }
 
-.usermotto {
-  margin-top: 200px;
+.home-top-text {
+  margin-bottom: 50rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.home-list {
+  margin-top: 300rpx;
+}
+
+.home-list-item {
+  display: flex;
+  width: 100%;
+  padding-top: 30rpx;
+}
+
+.home-list-item-left {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.home-list-item-avatar {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.home-list-item-right {
+  flex: 5;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.home-list-item-voice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 380rpx;
+  height: 60rpx;
+  border-radius: 8rpx;
+  background-color: #50e3c2;
+}
+
+.home-list-item-voice-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+
+.home-list-item-voice-duration {
+  margin-right: 20rpx;
+  font-size: 20rpx;
+  color: #fff;
 }
