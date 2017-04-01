@@ -1,17 +1,21 @@
 import { ON_LOAD, ON_FAILURE, ON_SUCCESS, loading, failure, success } from '../constants'
 import { introduction, joephon } from '../strings'
 import { joephonAvatar } from '../uris'
+import formatTime from '../utils/formatTime'
 
 const home = {
     status: 'Nothing Happend!',
     introduction,
     joephonAvatar,
     joephon,
-    homeList: [1,2,3,4,5,6,7,8,9],
+    homeList: [1,1,1,1,1,1,1,1,1,1,1,1],
     duration: 3598,
 }
+    , formatHome = Object.assign({}, home, { duration: formatTime(home.duration) })
 
-export default (state = home, action) => {
+export default (state = formatHome, action) => {
+    
+
     switch(action.type) {
         case ON_LOAD:
             return Object.assign({}, state, { status: loading })
