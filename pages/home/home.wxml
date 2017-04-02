@@ -1,8 +1,5 @@
 <import src="../../layouts/home-list.wxml" />
+<import src="../../layouts/go-record.wxml" />
 
-<view class="home-top">
-  <image class="home-joephon-avatar" src="{{joephonAvatar}}" mode="scaleToFill" />
-  <text class="home-top-name">{{joephon}}</text>
-  <text class="home-top-text">{{introduction}}</text>
-</view>
 <template is="home-list" data="{{duration, homeList, formatTime}}" />
+<template is="go-record" />

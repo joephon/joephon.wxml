@@ -1,0 +1,5 @@
+<view class="record-top">
+  <image class="record-joephon-avatar" src="{{static.joephonAvatar}}" mode="scaleToFill" />
+  <text class="record-top-name">{{static.joephon}}</text>
+  <text class="record-top-text">{{static.introduction}}</text>
+</view>

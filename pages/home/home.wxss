@@ -1,45 +1,12 @@
-.home-top {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300rpx; 
-  box-shadow: 1px 1px 5px #eee;
-  background-color: #50e3c2;
-}
-
-.home-joephon-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50%;
-}
-
-.home-top-name {
-  font-size: 22rpx;
-  color: #fff;
-}
-
-.home-top-text {
-  margin-bottom: 50rpx;
-  padding-left: 30rpx;
-  padding-right: 30rpx;
-  text-align: center;
-  font-size: 28rpx;
-  color: #fff;
-}
-
 .home-list {
-  margin-top: 300rpx;
+  /*margin-top: 300rpx;*/
 }
 
 .home-list-item {
   display: flex;
   width: 100%;
   padding-top: 30rpx;
+  background-color: #f3f3f3;
 }
 
 .home-list-item-left {
@@ -52,34 +19,58 @@
 .home-list-item-avatar {
   width: 70rpx;
   height: 70rpx;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 
 .home-list-item-right {
   flex: 5;
   padding-bottom: 30rpx;
-  border-bottom: 1rpx solid #f5f5f5;
+  border-bottom: 1rpx solid #f9f9f9;
 }
 
 .home-list-item-voice {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 380rpx;
-  height: 60rpx;
+  height: 70rpx;
   border-radius: 8rpx;
-  background-color: #50e3c2;
+  background-color: #afe46e;
 }
 
 .home-list-item-voice-icon {
   width: 30rpx;
   height: 30rpx;
-  margin-left: 20rpx;
+  margin-left: 10rpx;
 }
 
 .home-list-item-voice-duration {
   margin-right: 20rpx;
   font-size: 20rpx;
-  color: #fff;
+  font-weight: bold;
+  color: #333;
+}
+
+.home-list-item-voice-dress {
+  position: absolute;
+  left: -6rpx;
+  top: 30%;
+  width: 18rpx;
+  height: 18rpx;
+  transform: rotate(40deg);
+  background-color: #afe46e;
+}
+
+.go-record {
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+  padding: 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 50%;
+  background-color: #f5f5f5;
 }

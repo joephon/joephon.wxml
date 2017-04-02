@@ -1,11 +1,11 @@
-import click from '../../actions/click'
+import goRecord from '../../actions/goRecord'
 
 const { dispatch, store, subscribe } = getApp()
 
 Page({
   data: store.getState().home, 
 
-  click,
+  goRecord,
   
   onLoad() {
     this.unsubscribe = subscribe(() => this.setData(store.getState().home))

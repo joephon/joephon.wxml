@@ -1,0 +1,5 @@
+<template name="go-record">
+    <navigator url="/pages/record/record" open-type="navigate">
+        <image class="go-record" src="/images/record.png" />
+    </navigator>
+</template>

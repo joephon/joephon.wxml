@@ -1,0 +1,30 @@
+.record-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 300rpx; 
+  box-shadow: 1px 1px 5px #eee;
+  background-color: #50e3c2;
+}
+
+.record-joephon-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.record-top-name {
+  font-size: 22rpx;
+  color: #fff;
+}
+
+.record-top-text {
+  margin-bottom: 50rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}

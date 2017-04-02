@@ -1,12 +1,48 @@
 {
   "pages":[
-    "pages/home/home"
+    "pages/home/home",
+    "pages/record/record"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#50e3c2",
+    "navigationBarBackgroundColor": "#444",
     "navigationBarTitleText": "晓闻鸣",
     "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "borderStyle": "black",
+    "selectedColor": "#52b737",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "诸侯",
+        "iconPath": "images/chat.png",
+        "selectedIconPath": "images/chat-actived.png"
+      },
+      {
+        "pagePath": "pages/friend/friend",
+        "text": "闻鸣录",
+        "iconPath": "images/friends.png",
+        "selectedIconPath": "images/friends-actived.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "天下",
+        "iconPath": "images/find.png",
+        "selectedIconPath": "images/find-actived.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "吾",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-actived.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
   }
 }
 

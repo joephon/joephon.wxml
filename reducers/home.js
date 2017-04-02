@@ -1,13 +1,8 @@
 import { ON_LOAD, ON_FAILURE, ON_SUCCESS, loading, failure, success } from '../constants'
-import { introduction, joephon } from '../strings'
-import { joephonAvatar } from '../uris'
 import formatTime from '../utils/formatTime'
 
 const home = {
     status: 'Nothing Happend!',
-    introduction,
-    joephonAvatar,
-    joephon,
     homeList: [1,1,1,1,1,1,1,1,1,1,1,1],
     duration: 3598,
 }

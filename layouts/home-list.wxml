@@ -3,10 +3,11 @@
         <block wx:for="{{homeList}}" wx:key="{{index}}">
             <view class="home-list-item">
                 <view class="home-list-item-left">
-                    <image class="home-list-item-avatar" src="/images/testMM.png" />
+                    <image class="home-list-item-avatar" src="/images/testMM.png"/>
                 </view>
                 <view class="home-list-item-right">
                     <view class="home-list-item-voice">
+                        <view class="home-list-item-voice-dress" />
                         <image class="home-list-item-voice-icon" src="/images/voice.png" />
                         <text class="home-list-item-voice-duration">{{duration}}</text>
                     </view>
