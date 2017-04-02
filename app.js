@@ -8,5 +8,6 @@ App({
   },
   store,
   dispatch,
-  subscribe
+  subscribe,
+  recordSource: ''
 })

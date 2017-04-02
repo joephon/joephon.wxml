@@ -1,5 +1,8 @@
 <view class="record-top">
-  <image class="record-joephon-avatar" src="{{static.joephonAvatar}}" mode="scaleToFill" />
-  <text class="record-top-name">{{static.joephon}}</text>
-  <text class="record-top-text">{{static.introduction}}</text>
+  <image class="record-joephon-avatar" src="{{common.joephonAvatar}}" mode="scaleToFill" />
+  <text class="record-top-name">{{common.joephon}}</text>
+  <text class="record-top-text">{{common.introduction}}</text>
 </view>
+<text class="record-duration">{{record.duration}}</text>
+<image class="record-icon" src="{{record.onRecord ? '/images/recording.png' : '/images/start-record.png'}}" bindtap="startRecord"/>
+<text class="record-hint">{{record.onRecord ? record.recordStopHint : record.recordStartHint}}</text>

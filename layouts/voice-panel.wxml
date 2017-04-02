@@ -1,0 +1,6 @@
+<template name="voice-panel">
+    <view class="home-list-item-voice">
+        <image class="home-list-item-voice-icon" src="/images/voice.png" />
+        <text class="home-list-item-voice-duration">{{duration}}</text>
+    </view>
+</template>

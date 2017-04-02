@@ -2,10 +2,10 @@ import { ON_LOAD, ON_FAILURE, ON_SUCCESS, loading, failure, success } from '../c
 import formatTime from '../utils/formatTime'
 
 const home = {
-    status: 'Nothing Happend!',
-    homeList: [1,1,1,1,1,1,1,1,1,1,1,1],
-    duration: 3598,
-}
+        status: 'Nothing Happend!',
+        homeList: [1,1,1,1,1,1,1,1,1,1,1,1],
+        duration: 3598,
+      }
     , formatHome = Object.assign({}, home, { duration: formatTime(home.duration) })
 
 export default (state = formatHome, action) => {

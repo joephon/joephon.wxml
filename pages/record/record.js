@@ -1,16 +1,21 @@
 import { introduction, joephon } from '../../strings'
 import { joephonAvatar } from '../../uris'
+import startRecord from '../../actions/startRecord'
 
 const { dispatch, store, subscribe } = getApp()
 
 Page({
   data:{
-    static: {
+    common: {
       introduction,
       joephonAvatar,
       joephon,
-    }
+    },
+    record: store.getState().record
   },
+
+  startRecord,
+
   onLoad() {
     this.unsubscribe = subscribe(() => this.setData({
       record: store.getState().record
