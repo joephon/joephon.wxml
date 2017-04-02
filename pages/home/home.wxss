@@ -72,5 +72,6 @@
   padding: 20rpx;
   border: 1rpx solid #ccc;
   border-radius: 50%;
+  box-shadow: 1rpx 1rpx 1rpx 5rpx #eee;
   background-color: #f5f5f5;
 }

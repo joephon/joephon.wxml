@@ -4,5 +4,5 @@
   <text class="record-top-text">{{common.introduction}}</text>
 </view>
 <text class="record-duration">{{record.duration}}</text>
-<image class="record-icon" src="{{record.onRecord ? '/images/recording.png' : '/images/start-record.png'}}" bindtap="startRecord"/>
+<image class="record-icon" src="{{record.onRecord ? '/images/recording.png' : '/images/start-record.png'}}" bindtap="handleRecord"/>
 <text class="record-hint">{{record.onRecord ? record.recordStopHint : record.recordStartHint}}</text>

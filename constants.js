@@ -5,6 +5,7 @@ const ON_LOAD = 'ON_LOAD'
     , ON_RECORD_STOP = 'ON_RECORD_STOP'
     , ON_RECORD_ERROR = 'ON_RECORD_ERROR'
     , ON_RECORD_SUCCESS = 'ON_RECORD_SUCCESS'
+    , ON_RECORD_COUNT = 'ON_RECORD_COUNT'
     , loading = 'Loading'
     , failure = 'Load Failure'
     , success = 'Load Success'
@@ -21,6 +22,7 @@ export  {
    ON_RECORD_START,
    ON_RECORD_STOP,
    ON_RECORD_SUCCESS,
+   ON_RECORD_COUNT,
    loading,
    failure,
    success,

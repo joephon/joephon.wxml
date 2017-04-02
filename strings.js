@@ -2,6 +2,8 @@ const introduction = '每个人，都应该有自己的想法，说给自己听�
     , joephon = '侨疯'
     , recordStartHint = '轻按开始录音'
     , recordStopHint = '轻按结束录音'
+    , recordStart = '开始录音'
+    , recordStop = '录音结束'
 
 
 export {
@@ -9,4 +11,6 @@ export {
     joephon,
     recordStartHint,
     recordStopHint,
+    recordStart,
+    recordStop,
 }

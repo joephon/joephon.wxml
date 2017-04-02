@@ -1,6 +1,6 @@
 import { introduction, joephon } from '../../strings'
 import { joephonAvatar } from '../../uris'
-import startRecord from '../../actions/startRecord'
+import handleRecord from '../../actions/handleRecord'
 
 const { dispatch, store, subscribe } = getApp()
 
@@ -14,7 +14,7 @@ Page({
     record: store.getState().record
   },
 
-  startRecord,
+  handleRecord,
 
   onLoad() {
     this.unsubscribe = subscribe(() => this.setData({
@@ -31,6 +31,6 @@ Page({
     // 页面隐藏
   },
   onUnload:function(){
-    // 页面关闭
+    this.unsubscribe()
   }
 })
