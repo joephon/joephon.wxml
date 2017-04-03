@@ -6,6 +6,12 @@ const introduction = '每个人，都应该有自己的想法，说给自己听�
     , recordStop = '录音结束'
     , freeToView = '所有人可见'
     , submiteRecord = '发布想法'
+    , cheat = '闲聊'
+    , product = '产品'
+    , development = '开发'
+    , design = '设计'
+    , live = '生活'
+    , complain = '吐槽' 
 
 export {
     introduction,
@@ -16,4 +22,10 @@ export {
     recordStop,
     freeToView,
     submiteRecord,
+    cheat,
+    product,
+    development,
+    design,
+    live,
+    complain,
 }

@@ -3,6 +3,8 @@ import { joephonAvatar } from '../../uris'
 import handleRecord from '../../actions/handleRecord'
 import switchRecordShow from '../../actions/switchRecordShow'
 import playPauseRecord from '../../actions/playPauseRecord'
+import recordRadioChange from '../../actions/recordRadioChange'
+import handleRecordSubmit from '../../actions/handleRecordSubmit'
 
 const { dispatch, store, subscribe } = getApp()
 
@@ -23,6 +25,10 @@ Page({
   switchRecordShow,
 
   playPauseRecord,
+
+  recordRadioChange,
+
+  handleRecordSubmit,
 
   onLoad() {
     this.unsubscribe = subscribe(() => this.setData({

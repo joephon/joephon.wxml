@@ -1,5 +1,14 @@
-import { recordStartHint, recordStopHint } from '../strings'
 import formatTime from '../utils/formatTime'
+import { 
+    recordStartHint, 
+    recordStopHint,
+    cheat,
+    product,
+    live,
+    development,
+    design,
+    complain, 
+} from '../strings'
 import {
      ON_LOAD,
      ON_FAILURE,
@@ -13,7 +22,9 @@ import {
      ON_RECORD_PLAY,
      ON_RECORD_PAUSE,
      ON_RECORD_FINISH,
-     SWITCH_RECORD_SHOW,
+     ON_RECORD_SWITCH_SHOW,
+     ON_RECORD_RADIO_CHANGE,
+     ON_RECORD_SUBMIT,
      loading,
      success,
      failure,
@@ -33,6 +44,16 @@ const record = {
         play: false,
         duration: '0"',
         recordSource: '',
+        formData: '',
+        category: cheat,
+        categories: [
+            { name: cheat, value: cheat },
+            { name: complain, value: complain },
+            { name: live, value: live },
+            { name: product, value: product },
+            { name: design, value: design },
+            { name: development, value: development },
+        ]
       }
       
 
@@ -58,8 +79,14 @@ export default (state = record, action) => {
             return Object.assign({}, state, { play: false })
         case ON_RECORD_FINISH:
             return Object.assign({}, state, { time: 0, progress: 0, play: false })
-        case SWITCH_RECORD_SHOW:
+        case ON_RECORD_SWITCH_SHOW:
             return Object.assign({}, state, { show: !formatRecord.show})
+        case ON_RECORD_RADIO_CHANGE:
+            return Object.assign({}, state, { category: action.payload})
+        case ON_RECORD_SUBMIT:
+            const { recordSource, duration, rawDuration, category, show } = formatRecord
+            console.info(recordSource, duration, rawDuration, category, show)
+            return Object.assign({}, state, { formData: { recordSource, duration, rawDuration, category, show } })
         case ON_LOAD:
             return Object.assign({}, state, { status: loading})
         case ON_SUCCESS:

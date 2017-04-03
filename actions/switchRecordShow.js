@@ -1,6 +1,6 @@
 import store from '../store'
-import { SWITCH_RECORD_SHOW } from '../constants'
+import { ON_RECORD_SWITCH_SHOW } from '../constants'
 
 export default e => {
-    store.dispatch({ type: SWITCH_RECORD_SHOW})
+    store.dispatch({ type: ON_RECORD_SWITCH_SHOW})
 }

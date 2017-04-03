@@ -10,6 +10,9 @@ const ON_LOAD = 'ON_LOAD'
     , ON_RECORD_PLAY = 'ON_RECORD_PLAY'
     , ON_RECORD_PAUSE = 'ON_RECORD_PAUSE'
     , ON_RECORD_FINISH = 'ON_RECORD_FINISH'
+    , ON_RECORD_RADIO_CHANGE = 'ON_RECORD_RADIO_CHANGE'
+    , ON_RECORD_SUBMIT = 'ON_RECORD_SUBMIT'
+    , ON_RECORD_SWITCH_SHOW = 'ON_RECORD_SWITCH_SHOW'
     , loading = 'Loading'
     , failure = 'Load Failure'
     , success = 'Load Success'
@@ -31,6 +34,9 @@ export  {
    ON_RECORD_PLAY,
    ON_RECORD_PAUSE,
    ON_RECORD_FINISH,
+   ON_RECORD_RADIO_CHANGE,
+   ON_RECORD_SUBMIT,
+   ON_RECORD_SWITCH_SHOW,
    loading,
    failure,
    success,

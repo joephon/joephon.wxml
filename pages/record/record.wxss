@@ -60,6 +60,7 @@
 }
 
 .record-label {
+  margin-left: 35rpx;
   font-size: 30rpx;
   color: #999;
 }
@@ -94,7 +95,26 @@
   position: absolute;
   right: 30rpx;
   bottom: 50rpx;
+}
 
+.record-radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #fff;
+}
+
+.record-radio-item {
+  display: flex;
+  flex-direction: column;
+  height: 80rpx;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #666;
 }
 
 .record-icon {
