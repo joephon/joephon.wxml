@@ -73,33 +73,33 @@
 }
 
 .record-icon {
-    position: absolute;
-    bottom: 100rpx;
-    left: 50%;
-    width: 200rpx;
-    height: 200rpx;
-    margin-left: -100rpx;
+  position: absolute;
+  bottom: 100rpx;
+  left: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: -100rpx;
 }
 
 .record-duration {
-    position: absolute;
-    bottom: 320rpx;
-    width: 100%;
-    left: 0;  
-    text-align: center;
-    color: #222; 
+  position: absolute;
+  bottom: 320rpx;
+  width: 100%;
+  left: 0;  
+  text-align: center;
+  color: #222; 
 }
 
 .record-hint {
-    position: absolute;
-    bottom: 50rpx;
-    width: 100%;
-    left: 0;  
-    font-size: 30rpx;
-    text-align: center;
-    color: #999; 
+  position: absolute;
+  bottom: 50rpx;
+  width: 100%;
+  left: 0;  
+  font-size: 30rpx;
+  text-align: center;
+  color: #999; 
 }
 
 .record-hide {
-    display: none;
+  display: none;
 }

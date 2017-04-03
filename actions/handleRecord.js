@@ -27,12 +27,12 @@ function start() {
 
     showToast(recordStart, voiceIcon)
 
-    count()
-
     wx.startRecord({
       success,
       fail,
     })
+
+    count()
 }
 
 function success(res) {
@@ -43,7 +43,6 @@ function fail(res) {
     wx.stopRecord()
     store.dispatch({ type: ON_RECORD_ERROR , payload: res })    
 }
-
 
 function count() {
     setTimeout(() => {
