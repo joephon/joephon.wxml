@@ -9,6 +9,10 @@ import {
      ON_RECORD_ERROR,
      ON_RECORD_SUCCESS,
      ON_RECORD_COUNT,
+     ON_RECORD_PLAY,
+     ON_RECORD_PAUSE,
+     ON_RECORD_FINISH,
+     SWITCH_RECORD_SHOW,
      loading,
      success,
      failure,
@@ -21,6 +25,9 @@ const record = {
         recordStartHint,
         recordStopHint,
         rawDuration: 0,
+        time: 0,
+        show: true,
+        play: false,
         duration: '',
         recordSource: '',
         onRecord: false,
@@ -39,6 +46,14 @@ export default (state = record, action) => {
             return Object.assign({}, state, { status: recordReady, onRecord: false })
         case ON_RECORD_SUCCESS:
             return Object.assign({}, state, { status: recordSuccess, onRecord: false, recordSource: action.payload })
+        case ON_RECORD_PLAY:
+            return Object.assign({}, state, { play: true })
+        case ON_RECORD_PAUSE:
+            return Object.assign({}, state, { play: false })
+        case ON_RECORD_FINISH:
+            return Object.assign({}, state, { show: !formatRecord.show})
+        case SWITCH_RECORD_SHOW:
+            return Object.assign({}, state, { show: !formatRecord.show})
         case ON_LOAD:
             return Object.assign({}, state, { status: loading})
         case ON_SUCCESS:

@@ -1,6 +1,8 @@
-import { introduction, joephon } from '../../strings'
+import { introduction, joephon, freeToView } from '../../strings'
 import { joephonAvatar } from '../../uris'
 import handleRecord from '../../actions/handleRecord'
+import switchRecordShow from '../../actions/switchRecordShow'
+import playPauseRecord from '../../actions/playPauseRecord'
 
 const { dispatch, store, subscribe } = getApp()
 
@@ -10,11 +12,16 @@ Page({
       introduction,
       joephonAvatar,
       joephon,
+      freeToView,
     },
     record: store.getState().record
   },
 
   handleRecord,
+
+  switchRecordShow,
+
+  playPauseRecord,
 
   onLoad() {
     this.unsubscribe = subscribe(() => this.setData({

@@ -4,7 +4,7 @@ const introduction = '每个人，都应该有自己的想法，说给自己听�
     , recordStopHint = '轻按结束录音'
     , recordStart = '开始录音'
     , recordStop = '录音结束'
-
+    , freeToView = '所有人可见'
 
 export {
     introduction,
@@ -13,4 +13,5 @@ export {
     recordStopHint,
     recordStart,
     recordStop,
+    freeToView,
 }

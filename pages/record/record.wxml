@@ -3,6 +3,15 @@
   <text class="record-top-name">{{common.joephon}}</text>
   <text class="record-top-text">{{common.introduction}}</text>
 </view>
+<view class="record-option">
+  <text class="record-label">{{common.freeToView}}</text>
+  <switch type="switch" checked="{{record.show ? true : false}}" class="record-switch" bindchange="switchRecordShow"/>
+</view>
+<view class="record-display">
+  <image class="record-play" src="{{record.play ? '/images/pause.png' : '/images/play.png'}}" bindtap="playPauseRecord"/>
+  <progress class="record-progress" stroke-width="40" percent="0" />
+  <text class="record-time">{{record.time}} s</text>
+</view>
 <text class="record-duration">{{record.duration}}</text>
 <image class="record-icon" src="{{record.onRecord ? '/images/recording.png' : '/images/start-record.png'}}" bindtap="handleRecord"/>
 <text class="record-hint">{{record.onRecord ? record.recordStopHint : record.recordStartHint}}</text>
