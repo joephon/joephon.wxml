@@ -28,11 +28,11 @@ const record = {
         rawDuration: 0,
         time: 0,
         progress: 0,
+        onRecord: false,
         show: true,
         play: false,
         duration: '0"',
         recordSource: '',
-        onRecord: false,
       }
       
 

@@ -33,12 +33,17 @@ function playRecord() {
     })
 
     count()
+
+    setTimeout(() => stopRecord(), rawDuration * 1000)
 }
 
 function pauseRecord() {
-    store.dispatch({ type: ON_RECORD_PAUSE })
 
-    wx.pauseVoice()
+    wx.pauseVoice({
+        success: function(res) {
+            store.dispatch({ type: ON_RECORD_PAUSE })
+        }
+    })
 }
 
 function stopRecord() {

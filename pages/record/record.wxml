@@ -3,14 +3,17 @@
   <text class="record-top-name">{{common.joephon}}</text>
   <text class="record-top-text">{{common.introduction}}</text>
 </view>
-<view class="record-option">
-  <text class="record-label">{{common.freeToView}}</text>
-  <switch type="switch" checked="{{record.show ? true : false}}" class="record-switch" bindchange="switchRecordShow"/>
-</view>
-<view class="record-display">
-  <image class="record-play" src="{{record.play ? '/images/pause.png' : '/images/play.png'}}" bindtap="playPauseRecord"/>
-  <progress class="record-progress" stroke-width="40" percent="{{record.progress}}" />
-  <text class="record-time">{{record.time}} s</text>
+<view class="{{record.onRecord ? 'record-content record-hide' : 'record-content'}}">
+  <view class="record-option">
+    <text class="record-label">{{common.freeToView}}</text>
+    <switch type="switch" checked="{{record.show ? true : false}}" class="record-switch" bindchange="switchRecordShow"/>
+  </view>
+  <view class="record-display">
+    <image class="record-play" src="{{record.play ? '/images/pause.png' : '/images/play.png'}}" bindtap="playPauseRecord"/>
+    <progress class="record-progress" stroke-width="40" percent="{{record.progress}}" />
+    <text class="record-time">{{record.time}} s</text>
+  </view>
+  <button class="record-submit" type="primary" size="mini" loading="" plain="true" disabled="{{record.recordSource ? false : true}}">submit</button>
 </view>
 <text class="record-duration">{{record.duration}}</text>
 <image class="record-icon" src="{{record.onRecord ? '/images/recording.png' : '/images/start-record.png'}}" bindtap="handleRecord"/>
