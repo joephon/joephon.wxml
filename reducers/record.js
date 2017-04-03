@@ -30,7 +30,7 @@ const record = {
         progress: 0,
         show: true,
         play: false,
-        duration: '',
+        duration: '0"',
         recordSource: '',
         onRecord: false,
       }
@@ -51,7 +51,7 @@ export default (state = record, action) => {
         case ON_RECORD_PLAY:
             return Object.assign({}, state, { play: true })
         case ON_RECORD_PLAY_COUNT:
-            let progress = ((formatRecord.time + 2) / formatRecord.rawDuration ) * 100
+            let progress = ((formatRecord.time + 1) / (formatRecord.rawDuration - 1)) * 100
             if(progress > 100) progress = 100
             return Object.assign({}, state, { time: formatRecord.time += 1, progress  })
         case ON_RECORD_PAUSE:
