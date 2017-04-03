@@ -1,4 +1,4 @@
-import { introduction, joephon, freeToView } from '../../strings'
+import { introduction, joephon, freeToView, submiteRecord } from '../../strings'
 import { joephonAvatar } from '../../uris'
 import handleRecord from '../../actions/handleRecord'
 import switchRecordShow from '../../actions/switchRecordShow'
@@ -13,6 +13,7 @@ Page({
       joephonAvatar,
       joephon,
       freeToView,
+      submiteRecord,
     },
     record: store.getState().record
   },

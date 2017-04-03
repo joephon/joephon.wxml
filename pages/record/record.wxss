@@ -93,7 +93,7 @@
 .record-submit {
   position: absolute;
   right: 30rpx;
-  bottom: 30rpx;
+  bottom: 50rpx;
 
 }
 

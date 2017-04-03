@@ -5,6 +5,7 @@ const introduction = '每个人，都应该有自己的想法，说给自己听�
     , recordStart = '开始录音'
     , recordStop = '录音结束'
     , freeToView = '所有人可见'
+    , submiteRecord = '发布想法'
 
 export {
     introduction,
@@ -14,4 +15,5 @@ export {
     recordStart,
     recordStop,
     freeToView,
+    submiteRecord,
 }
