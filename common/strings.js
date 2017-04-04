@@ -13,6 +13,9 @@ const introduction = '每个人，都应该有自己的想法，说给自己听�
     , live = '生活'
     , complain = '吐槽' 
     , login = '微信登录'
+    , xwm = '晓闻鸣'
+    , description = '一款玩具应用'
+    , loading = '请求中...'
 
 export {
     introduction,
@@ -30,4 +33,7 @@ export {
     live,
     complain,
     login,
+    xwm,
+    description,
+    loading,
 }

@@ -4,12 +4,44 @@
    left: 0;
    right: 0;
    bottom: 0; 
-   background-color: green;
+   background-color: #f3f3f3;
 }
 
-.login-bg {
+.login-img {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 200rpx;
+    height: 200rpx;
+    margin-left: -100rpx;
+    border-radius: 50%;
+}
+
+.login-content {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+}
+
+.login-product {
+    font-weight: bold;
+    color: #000 !important;
+}
+
+.login-name {
+    font-size: 25rpx !important;
+    color: #999 !important;
+}
+
+.login-text {
+   display: block;
    width: 100%;
    height: 100%; 
+   margin-bottom: 20rpx;
+   text-align: center;
+   font-size: 30rpx;
+   color: #555;
 }
 
 .login-button {

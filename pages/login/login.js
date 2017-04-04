@@ -1,4 +1,4 @@
-import { login } from '../../common/strings'
+import { login, xwm, description, joephon } from '../../common/strings'
 import handleLogin from '../../actions/handleLogin'
 
 const { store, subscribe } = getApp()
@@ -7,6 +7,9 @@ Page({
     data: {
         common: {
             login,
+            xwm,
+            description,
+            joephon,
         },
         login: store.getState().login
     },

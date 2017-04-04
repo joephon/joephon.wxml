@@ -1,6 +1,8 @@
 import store from '../common/store'
 import { host, session } from '../common/apis'
 import setStorage from '../utils/setStorage'
+import showLoading from '../utils/showLoading'
+import { loading } from '../common/strings'
 import { 
     ON_LOGIN_START, 
     ON_LOGIN_SUCCESS, 
@@ -12,6 +14,7 @@ import {
 
 export default () => {
     store.dispatch({ type: ON_LOGIN_START })
+    showLoading(loading)
     wx.login({
       success,
       fail,
@@ -25,6 +28,7 @@ function success(res) {
 
 function fail(res) {
     store.dispatch({ type: ON_LOGIN_FAILURE, payload: res })
+    wx.hideLoading()
 }
 
 function getUserInfo(code) {
@@ -41,6 +45,7 @@ function getUserSuccess(res, code) {
 
 function getUserFail(res) {
     store.dispatch({ type: ON_LOGIN_FAILURE, payload: res })
+    wx.hideLoading()
 }
 
 function getToken() {
@@ -59,6 +64,7 @@ function getTokenSuccess(res) {
     setStorage('token', res.data.token)
     setStorage('wxInfo', res.data.wxInfo)
     store.dispatch({ type: ON_SESSION_SUCCESS, payload: { wxInfo: res.wxInfo }})
+    wx.hideLoading()
     wx.reLaunch({
       url: '/pages/home/home',
     })
@@ -66,5 +72,5 @@ function getTokenSuccess(res) {
 
 function getTokenFail(res) {
     store.dispatch({ type: ON_SESSION_FAILURE })
-    console.log(res)
+    wx.hideLoading()
 }

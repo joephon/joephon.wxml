@@ -1,4 +1,10 @@
 <view class="login">
-    <image class="login-bg" src="/images/wechat-bg.jpg" />
+    <image class="login-img" src="/images/joephon-avatar.jpg" />
+    <view class="login-content">
+        <text class="login-text login-product">『{{common.xwm}}』</text>
+        <text class="login-text">{{common.description}}</text>
+        <text class="login-text">presented by</text>
+        <text class="login-text login-name">{{common.joephon}}</text>
+    </view>
     <button class="login-button" type="primary" size="default" bindtap="handleLogin">{{common.login}}</button>
 </view>
