@@ -18,7 +18,7 @@
     <progress class="record-progress" stroke-width="40" percent="{{record.progress}}" />
     <text class="record-time">{{record.time}} s</text>
   </view>
-  <button class="record-submit" type="primary" size="mini" loading="" plain="true" disabled="{{record.recordSource ? false : true}}" bindtap="handleRecordSubmit">{{common.submiteRecord}}</button>
+  <button class="record-submit" type="primary" size="mini" loading="" plain="true" disabled="{{record.recordSource ? false : true}}" bindtap="handleRecordSubmit">{{common.submitRecord}}</button>
 </view>
 <text class="record-duration">{{record.duration}}</text>
 <image class="record-icon" src="{{record.onRecord ? '/images/recording.png' : '/images/start-record.png'}}" bindtap="handleRecord"/>

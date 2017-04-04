@@ -1,5 +1,5 @@
-import { introduction, joephon, freeToView, submiteRecord } from '../../strings'
-import { joephonAvatar } from '../../uris'
+import { introduction, joephon, freeToView, submitRecord } from '../../common/strings'
+import { joephonAvatar } from '../../common/uris'
 import handleRecord from '../../actions/handleRecord'
 import switchRecordShow from '../../actions/switchRecordShow'
 import playPauseRecord from '../../actions/playPauseRecord'
@@ -15,7 +15,7 @@ Page({
       joephonAvatar,
       joephon,
       freeToView,
-      submiteRecord,
+      submitRecord,
     },
     record: store.getState().record
   },
@@ -44,7 +44,7 @@ Page({
   onHide:function(){
     // 页面隐藏
   },
-  onUnload:function(){
+  onUnload(){
     this.unsubscribe()
   }
 })

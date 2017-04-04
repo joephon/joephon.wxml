@@ -1,4 +1,4 @@
-import { ON_LOAD, ON_FAILURE, ON_SUCCESS } from '../constants'
+import { ON_LOAD, ON_FAILURE, ON_SUCCESS } from '../common/constants'
 const me = {
 
 }

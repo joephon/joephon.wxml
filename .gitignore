@@ -1,5 +1,6 @@
 # Mac OX
 .DS_Store
+/common/keys.js
 
 # Logs
 logs

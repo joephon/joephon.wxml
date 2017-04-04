@@ -1,5 +1,5 @@
-import store from '../store'
-import { ON_RECORD_PLAY, ON_RECORD_PAUSE, ON_RECORD_FINISH, ON_RECORD_PLAY_COUNT } from '../constants'
+import store from '../common/store'
+import { ON_RECORD_PLAY, ON_RECORD_PAUSE, ON_RECORD_FINISH, ON_RECORD_PLAY_COUNT } from '../common/constants'
 
 export default e => {
     const { time, rawDuration, play } = store.getState().record

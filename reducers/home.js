@@ -1,4 +1,4 @@
-import { ON_LOAD, ON_FAILURE, ON_SUCCESS, loading, failure, success } from '../constants'
+import { ON_LOAD, ON_FAILURE, ON_SUCCESS, loading, failure, success } from '../common/constants'
 import formatTime from '../utils/formatTime'
 
 const home = {

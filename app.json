@@ -1,13 +1,14 @@
 {
   "pages":[
     "pages/home/home",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#444",
     "navigationBarTitleText": "晓闻鸣",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle":"white"
   },
   "tabBar": {
     "color": "#bfbfbf",

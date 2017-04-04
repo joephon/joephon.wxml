@@ -1,7 +1,7 @@
-import store from '../store'
-import { ON_RECORD_START, ON_RECORD_ERROR, ON_RECORD_STOP, ON_RECORD_SUCCESS, ON_RECORD_COUNT } from '../constants'
-import { recordStart, recordStop } from '../strings'
-import { voiceIcon } from '../uris'
+import store from '../common/store'
+import { ON_RECORD_START, ON_RECORD_ERROR, ON_RECORD_STOP, ON_RECORD_SUCCESS, ON_RECORD_COUNT } from '../common/constants'
+import { recordStart, recordStop } from '../common/strings'
+import { voiceIcon } from '../common/uris'
 import showToast from '../utils/showToast'
 
 export default e => {

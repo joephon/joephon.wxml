@@ -8,7 +8,7 @@ import {
     development,
     design,
     complain, 
-} from '../strings'
+} from '../common/strings'
 import {
      ON_LOAD,
      ON_FAILURE,
@@ -31,7 +31,7 @@ import {
      recordReady,
      recording,
      recordSuccess, 
-} from '../constants'
+} from '../common/constants'
 
 const record = {
         recordStartHint,
@@ -88,11 +88,11 @@ export default (state = record, action) => {
             console.info(recordSource, duration, rawDuration, category, show)
             return Object.assign({}, state, { formData: { recordSource, duration, rawDuration, category, show } })
         case ON_LOAD:
-            return Object.assign({}, state, { status: loading})
+            return Object.assign({}, state, { status: loading })
         case ON_SUCCESS:
-            return Object.assign({}, state, { status: success})
+            return Object.assign({}, state, { status: success })
         case ON_FAILURE:
-            return Object.assign({}, state, { status: failure})
+            return Object.assign({}, state, { status: failure })
         default:
             return state
     }
