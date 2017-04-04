@@ -57,11 +57,14 @@ function getToken() {
 
 function getTokenSuccess(res) {
     setStorage('token', res.data.token)
+    setStorage('wxInfo', res.data.wxInfo)
+    store.dispatch({ type: ON_SESSION_SUCCESS, payload: { wxInfo: res.wxInfo }})
     wx.reLaunch({
       url: '/pages/home/home',
     })
 }
 
 function getTokenFail(res) {
+    store.dispatch({ type: ON_SESSION_FAILURE })
     console.log(res)
 }

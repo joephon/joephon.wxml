@@ -18,6 +18,6 @@ Page({
     },
 
     onUnload() {
-        this.unsubcribe()
+        this.unsubscribe()
     }
 })
