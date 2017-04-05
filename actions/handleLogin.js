@@ -9,7 +9,7 @@ import {
     ON_LOGIN_FAILURE, 
     ON_SESSION_START, 
     ON_SESSION_SUCCESS, 
-    ON_SESSCION_FAILURE 
+    ON_SESSION_FAILURE 
 } from '../common/constants'
 
 export default () => {

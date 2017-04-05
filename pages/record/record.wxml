@@ -9,7 +9,7 @@
     <switch type="switch" checked="{{record.show ? true : false}}" class="record-switch" bindchange="switchRecordShow"/>
   </view>
   <radio-group class="record-radio-group" bindchange="recordRadioChange">
-    <label class="record-radio-item" wx:key="index" wx:for="{{record.categories}}">
+    <label class="record-radio-item" wx:key="index" wx:for="{{common.categories}}">
       <radio value="{{item.name}}" checked="{{record.category === item.value ? true : false}}"/>{{item.value}}
     </label>
   </radio-group>
@@ -18,7 +18,7 @@
     <progress class="record-progress" stroke-width="40" percent="{{record.progress}}" />
     <text class="record-time">{{record.time}} s</text>
   </view>
-  <button class="record-submit" type="primary" size="mini" loading="" plain="true" disabled="{{record.recordSource ? false : true}}" bindtap="handleRecordSubmit">{{common.submitRecord}}</button>
+  <button class="record-submit" type="primary" size="mini" loading="" plain="true" disabled="{{record.recordSource && !record.loading ? false : true}}" bindtap="handleRecordSubmit">{{common.submitRecord}}</button>
 </view>
 <text class="record-duration">{{record.duration}}</text>
 <image class="record-icon" src="{{record.onRecord ? '/images/recording.png' : '/images/start-record.png'}}" bindtap="handleRecord"/>

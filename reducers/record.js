@@ -1,14 +1,5 @@
 import formatTime from '../utils/formatTime'
-import { 
-    recordStartHint, 
-    recordStopHint,
-    cheat,
-    product,
-    live,
-    development,
-    design,
-    complain, 
-} from '../common/strings'
+import { recordStartHint, recordStopHint, cheat } from '../common/strings'
 import {
      ON_LOAD,
      ON_FAILURE,
@@ -24,7 +15,9 @@ import {
      ON_RECORD_FINISH,
      ON_RECORD_SWITCH_SHOW,
      ON_RECORD_RADIO_CHANGE,
-     ON_RECORD_SUBMIT,
+     ON_RECORD_SUBMIT_START,
+     ON_RECORD_SUBMIT_SUCCESS,
+     ON_RECORD_SUBMIT_FAILURE,
      loading,
      success,
      failure,
@@ -46,14 +39,7 @@ const record = {
         recordSource: '',
         formData: '',
         category: cheat,
-        categories: [
-            { name: cheat, value: cheat },
-            { name: complain, value: complain },
-            { name: live, value: live },
-            { name: product, value: product },
-            { name: design, value: design },
-            { name: development, value: development },
-        ]
+        loading: false,
       }
       
 
@@ -83,16 +69,13 @@ export default (state = record, action) => {
             return Object.assign({}, state, { show: !formatRecord.show})
         case ON_RECORD_RADIO_CHANGE:
             return Object.assign({}, state, { category: action.payload})
-        case ON_RECORD_SUBMIT:
+        case ON_RECORD_SUBMIT_START:
             const { recordSource, duration, rawDuration, category, show } = formatRecord
-            console.info(recordSource, duration, rawDuration, category, show)
-            return Object.assign({}, state, { formData: { recordSource, duration, rawDuration, category, show } })
-        case ON_LOAD:
-            return Object.assign({}, state, { status: loading })
-        case ON_SUCCESS:
-            return Object.assign({}, state, { status: success })
-        case ON_FAILURE:
-            return Object.assign({}, state, { status: failure })
+            return Object.assign({}, state, { loading: true, formData: { recordSource, duration, rawDuration, category, show } })
+        case ON_RECORD_SUBMIT_SUCCESS:
+            return Object.assign({}, state, record)
+        case ON_RECORD_SUBMIT_FAILURE:
+            return Object.assign({}, state, { loading: false, error: action.payload })
         default:
             return state
     }

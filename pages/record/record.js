@@ -1,10 +1,21 @@
-import { introduction, joephon, freeToView, submitRecord } from '../../common/strings'
 import { joephonAvatar } from '../../common/uris'
 import handleRecord from '../../actions/handleRecord'
 import switchRecordShow from '../../actions/switchRecordShow'
 import playPauseRecord from '../../actions/playPauseRecord'
 import recordRadioChange from '../../actions/recordRadioChange'
 import handleRecordSubmit from '../../actions/handleRecordSubmit'
+import { 
+    introduction, 
+    joephon, 
+    freeToView, 
+    submitRecord,     
+    cheat,
+    product,
+    live,
+    development,
+    design,
+    complain,  
+} from '../../common/strings'
 
 const { dispatch, store, subscribe } = getApp()
 
@@ -16,6 +27,14 @@ Page({
       joephon,
       freeToView,
       submitRecord,
+      categories: [
+          { name: cheat, value: cheat },
+          { name: complain, value: complain },
+          { name: live, value: live },
+          { name: product, value: product },
+          { name: design, value: design },
+          { name: development, value: development },
+      ]
     },
     record: store.getState().record
   },
