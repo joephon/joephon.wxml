@@ -1,15 +1,15 @@
 <template name="home-list">
     <view class="home-list">
-        <block wx:for="{{homeList}}" wx:key="{{index}}">
+        <block wx:for="{{ thoughts }}" wx:key="{{ index }}">
             <view class="home-list-item">
                 <view class="home-list-item-left">
-                    <image class="home-list-item-avatar" src="/images/testMM.png"/>
+                    <image class="home-list-item-avatar" src="{{item.userInfo.avatarUrl || '/images/testMM.png'}}"/>
                 </view>
                 <view class="home-list-item-right">
-                    <view class="home-list-item-voice">
+                    <view class="home-list-item-voice" style="{{'width:' + (120 + 5 * item.rawDuration) + 'rpx'}}">
                         <view class="home-list-item-voice-dress" />
                         <image class="home-list-item-voice-icon" src="/images/voice.png" />
-                        <text class="home-list-item-voice-duration">{{duration}}</text>
+                        <text class="home-list-item-voice-duration">{{item.duration}}</text>
                     </view>
                 </view>
             </view>

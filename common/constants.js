@@ -1,6 +1,9 @@
 const ON_LOAD = 'ON_LOAD'
     , ON_FAILURE = 'ON_FAILURE'
     , ON_SUCCESS = 'ON_SUCCESS'
+    , ON_HOME_LOAD_START = 'ON_HOME_LOAD_START'
+    , ON_HOME_LOAD_FAILURE = 'ON_HOME_LOAD_FAILURE'
+    , ON_HOME_LOAD_SUCCESS = 'ON_HOME_LOAD_SUCCESS'
     , ON_RECORD_START = 'ON_RECORD_START'
     , ON_RECORD_STOP = 'ON_RECORD_STOP'
     , ON_RECORD_ERROR = 'ON_RECORD_ERROR'
@@ -21,18 +24,14 @@ const ON_LOAD = 'ON_LOAD'
     , ON_SESSION_START = 'ON_SESSION_START'
     , ON_SESSION_SUCCESS = 'ON_SESSION_SUCCESS'
     , ON_SESSION_FAILURE = 'ON_SESSION_FAILURE'
-    , loading = 'Loading'
-    , failure = 'Load Failure'
-    , success = 'Load Success'
-    , recording = 'Recoding'
-    , recordReady = 'Record Ready'
-    , recordFailure = 'Record Failure'
-    , recordSuccess = 'Record Success'
 
 export  {
    ON_LOAD, 
    ON_FAILURE,
    ON_SUCCESS,
+   ON_HOME_LOAD_START, 
+   ON_HOME_LOAD_FAILURE,
+   ON_HOME_LOAD_SUCCESS,
    ON_RECORD_ERROR,
    ON_RECORD_START,
    ON_RECORD_STOP,
@@ -53,11 +52,4 @@ export  {
    ON_SESSION_START,
    ON_SESSION_SUCCESS,
    ON_SESSION_FAILURE,
-   loading,
-   failure,
-   success,
-   recording,
-   recordReady,
-   recordFailure,
-   recordSuccess,
 }

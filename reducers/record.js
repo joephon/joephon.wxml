@@ -1,9 +1,6 @@
 import formatTime from '../utils/formatTime'
 import { recordStartHint, recordStopHint, cheat } from '../common/strings'
 import {
-     ON_LOAD,
-     ON_FAILURE,
-     ON_SUCCESS,
      ON_RECORD_START, 
      ON_RECORD_STOP, 
      ON_RECORD_ERROR,
@@ -18,12 +15,6 @@ import {
      ON_RECORD_SUBMIT_START,
      ON_RECORD_SUBMIT_SUCCESS,
      ON_RECORD_SUBMIT_FAILURE,
-     loading,
-     success,
-     failure,
-     recordReady,
-     recording,
-     recordSuccess, 
 } from '../common/constants'
 
 const record = {
@@ -48,13 +39,13 @@ export default (state = record, action) => {
 
     switch(action.type) {
         case ON_RECORD_START:
-            return Object.assign({}, state, { status: recording, onRecord: true, duration: '', rawDuration: 0, recordSource: '' })
+            return Object.assign({}, state, { onRecord: true, duration: '', rawDuration: 0, recordSource: '' })
         case ON_RECORD_COUNT:
             return Object.assign({}, state, { rawDuration: formatRecord.rawDuration += 1, duration: formatRecord.duration })
         case ON_RECORD_STOP:
-            return Object.assign({}, state, { status: recordReady, onRecord: false })
+            return Object.assign({}, state, { onRecord: false })
         case ON_RECORD_SUCCESS:
-            return Object.assign({}, state, { status: recordSuccess, onRecord: false, recordSource: action.payload })
+            return Object.assign({}, state, { onRecord: false, recordSource: action.payload })
         case ON_RECORD_PLAY:
             return Object.assign({}, state, { play: true })
         case ON_RECORD_PLAY_COUNT:

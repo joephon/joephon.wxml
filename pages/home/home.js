@@ -1,9 +1,15 @@
+import getRecords from '../../actions/getRecords'
+
 const { store, subscribe } = getApp()
 
 Page({
-  data: store.getState().home, 
+  data: {
+    common: '',
+    home: store.getState().home
+  }, 
   
-  onLoad() {
+  onShow() {
     this.unsubscribe = subscribe(() => this.setData(store.getState().home))
+    getRecords()
   }
 })

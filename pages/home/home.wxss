@@ -34,7 +34,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 380rpx;
+  max-width: 380rpx !important;
+  min-width: 120rpx !important;
   height: 70rpx;
   border-radius: 8rpx;
   background-color: #afe46e;

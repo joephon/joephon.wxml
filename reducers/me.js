@@ -6,11 +6,11 @@ const me = {
 export default (state = me, action) => {
     switch(action.type) {
         case ON_LOAD:
-            return Object.assign({}, state, { status: 'Loading'})
+            return Object.assign({}, state, { })
         case ON_SUCCESS:
-            return Object.assign({}, state, { status: 'Loading Success'})
+            return Object.assign({}, state, { })
         case ON_FAILURE:
-            return Object.assign({}, state, { status: 'Loading FAILURE'})
+            return Object.assign({}, state, { })
         default:
             return state
     }

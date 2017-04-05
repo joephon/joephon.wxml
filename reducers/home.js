@@ -1,23 +1,25 @@
-import { ON_LOAD, ON_FAILURE, ON_SUCCESS, loading, failure, success } from '../common/constants'
-import formatTime from '../utils/formatTime'
+import { 
+    ON_HOME_LOAD_START, 
+    ON_HOME_LOAD_FAILURE, 
+    ON_HOME_LOAD_SUCCESS, 
+} from '../common/constants'
 
 const home = {
-        status: 'Nothing Happend!',
-        homeList: [1,1,1,1,1,1,1,1,1,1,1,1],
-        duration: 3598,
+        loading: false,
+        thoughts: [],
+        count: 0,
+        error: ''
       }
-    , formatHome = Object.assign({}, home, { duration: formatTime(home.duration) })
 
-export default (state = formatHome, action) => {
-    
-
+export default (state = home, action) => {
     switch(action.type) {
-        case ON_LOAD:
-            return Object.assign({}, state, { status: loading })
-        case ON_SUCCESS:
-            return Object.assign({}, state, { status: success })
-        case ON_FAILURE:
-            return Object.assign({}, state, { status: failure })
+        case ON_HOME_LOAD_START:
+            return Object.assign({}, state, { loading: true })
+        case ON_HOME_LOAD_SUCCESS:
+            const { thoughts, count } = action.payload
+            return Object.assign({}, state, { loading: false, thoughts, count, })
+        case ON_HOME_LOAD_FAILURE:
+            return Object.assign({}, state, { loading: false, error: action.payload })
         default:
             return state
     }
