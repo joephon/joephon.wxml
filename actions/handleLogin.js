@@ -1,7 +1,8 @@
 import store from '../common/store'
-import { host, session } from '../common/apis'
+import { session } from '../common/apis'
 import setStorage from '../utils/setStorage'
 import showLoading from '../utils/showLoading'
+import dispatch from '../utils/dispatch'
 import { loading } from '../common/strings'
 import { 
     ON_LOGIN_START, 
@@ -13,7 +14,7 @@ import {
 } from '../common/constants'
 
 export default () => {
-    store.dispatch({ type: ON_LOGIN_START })
+    dispatch(ON_LOGIN_START)
     showLoading(loading)
     wx.login({
       success,
@@ -27,7 +28,7 @@ function success(res) {
 }
 
 function fail(res) {
-    store.dispatch({ type: ON_LOGIN_FAILURE, payload: res })
+    dispatch(ON_LOGIN_FAILURE, res)
     wx.hideLoading()
 }
 
@@ -39,18 +40,18 @@ function getUserInfo(code) {
 }
 
 function getUserSuccess(res, code) {
-    store.dispatch({ type: ON_LOGIN_SUCCESS, payload: { code, iv: res.iv, encryptedData: res.encryptedData } })
+    dispatch(ON_LOGIN_SUCCESS, { code, iv: res.iv, encryptedData: res.encryptedData })
     getToken()
 }
 
 function getUserFail(res) {
-    store.dispatch({ type: ON_LOGIN_FAILURE, payload: res })
+    dispatch(ON_LOGIN_FAILURE, res)
     wx.hideLoading()
 }
 
 function getToken() {
-    store.dispatch({ type: ON_SESSION_START })
-    const { iv, code, encryptedData } = store.getState().login
+    dispatch(ON_SESSION_START)
+    const { iv, code, encryptedData } = store.getState().login    
     wx.request({
       url: `${session}`,
       data: { iv, code, encryptedData },
@@ -63,7 +64,7 @@ function getToken() {
 function getTokenSuccess(res) {
     setStorage('token', res.data.token)
     setStorage('wxInfo', res.data.wxInfo)
-    store.dispatch({ type: ON_SESSION_SUCCESS, payload: { wxInfo: res.wxInfo }})
+    dispatch(ON_SESSION_SUCCESS, { wxInfo: res.wxInfo })
     wx.hideLoading()
     wx.reLaunch({
       url: '/pages/home/home',
@@ -71,6 +72,6 @@ function getTokenSuccess(res) {
 }
 
 function getTokenFail(res) {
-    store.dispatch({ type: ON_SESSION_FAILURE })
+    dispatch(ON_SESSION_FAILURE)
     wx.hideLoading()
 }

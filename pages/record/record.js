@@ -17,7 +17,7 @@ import {
     complain,  
 } from '../../common/strings'
 
-const { dispatch, store, subscribe } = getApp()
+const { store, subscribe } = getApp()
 
 Page({
   data:{

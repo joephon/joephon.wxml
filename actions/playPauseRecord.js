@@ -1,4 +1,5 @@
 import store from '../common/store'
+import dispatch from '../utils/dispatch'
 import { ON_RECORD_PLAY, ON_RECORD_PAUSE, ON_RECORD_FINISH, ON_RECORD_PLAY_COUNT } from '../common/constants'
 
 export default e => {
@@ -15,7 +16,7 @@ function count() {
     const { time, rawDuration, play } = store.getState().record
 
     setTimeout(() => {
-        store.dispatch({ type: ON_RECORD_PLAY_COUNT})
+        dispatch(ON_RECORD_PLAY_COUNT)
         if(play && time < rawDuration -2 ) count()
     }, 1000)
 }
@@ -23,7 +24,7 @@ function count() {
 function playRecord() {
     const { recordSource, rawDuration } = store.getState().record
 
-    store.dispatch({ type: ON_RECORD_PLAY })
+    dispatch(ON_RECORD_PLAY)
 
     wx.playVoice({
       filePath: recordSource,
@@ -41,13 +42,13 @@ function pauseRecord() {
 
     wx.pauseVoice({
         success: function(res) {
-            store.dispatch({ type: ON_RECORD_PAUSE })
+            dispatch(ON_RECORD_PAUSE)
         }
     })
 }
 
 function stopRecord() {
-    store.dispatch({ type: ON_RECORD_FINISH })
+    dispatch(ON_RECORD_FINISH)
 
     wx.stopVoice()
 }

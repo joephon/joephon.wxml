@@ -7,7 +7,7 @@ import { thought } from '../common/apis'
 import dispatch from '../utils/dispatch'
 
 export default e => {
-    store.dispatch({ type: ON_RECORD_SUBMIT_START })
+    dispatch(ON_RECORD_SUBMIT_START)
     showLoading(loading)
     uploadRecord()
 }
