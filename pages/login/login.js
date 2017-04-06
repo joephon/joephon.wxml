@@ -16,7 +16,7 @@ Page({
 
     handleLogin,
 
-    onLoad() {
+    onShow() {
         this.unsubscribe = subscribe(() => this.setData(store.getState().login))
     },
 

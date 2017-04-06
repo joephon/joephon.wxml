@@ -1,5 +1,5 @@
 <import src="../../layouts/home-list.wxml" />
 <import src="../../layouts/go-record.wxml" />
 
-<template is="home-list" data="{{ common, thoughts, count }}" />
+<template is="home-list" data="{{ common, thoughts, count, which }}" />
 <template is="go-record" />

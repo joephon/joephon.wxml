@@ -57,7 +57,7 @@ export default (state = record, action) => {
         case ON_RECORD_FINISH:
             return Object.assign({}, state, { time: 0, progress: 0, play: false })
         case ON_RECORD_SWITCH_SHOW:
-            return Object.assign({}, state, { show: !formatRecord.show})
+            return Object.assign({}, state, { show: !state.show})
         case ON_RECORD_RADIO_CHANGE:
             return Object.assign({}, state, { category: action.payload})
         case ON_RECORD_SUBMIT_START:
