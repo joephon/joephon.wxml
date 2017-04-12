@@ -48,7 +48,7 @@
 }*/
 
 .home-list-item-voice-icon {
-
+  display: block;
   height: 100%;
   width: 100%;
   padding-left:10rpx; 

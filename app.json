@@ -2,7 +2,8 @@
   "pages":[
     "pages/home/home",
     "pages/record/record",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/me/me"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,25 +18,13 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "诸侯",
-        "iconPath": "images/chat.png",
-        "selectedIconPath": "images/chat-actived.png"
-      },
-      {
-        "pagePath": "pages/friend/friend",
-        "text": "闻鸣录",
-        "iconPath": "images/friends.png",
-        "selectedIconPath": "images/friends-actived.png"
-      },
-      {
-        "pagePath": "pages/find/find",
-        "text": "天下",
+        "text": "闻",
         "iconPath": "images/find.png",
         "selectedIconPath": "images/find-actived.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "吾",
+        "text": "我",
         "iconPath": "images/me.png",
         "selectedIconPath": "images/me-actived.png"
       }

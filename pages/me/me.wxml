@@ -1,0 +1,7 @@
+<view class="me">
+    <view class="me-top">
+        <image class="me-avatar" src="{{me.userInfo.avatarUrl || '/images/testMM.png'}}" />
+        <text class="me-name">{{me.userInfo.nickName}}</text>
+    </view>
+    <contact-button class="me-contact" type="default-light" size="27" session-from="xwm" />
+</view>

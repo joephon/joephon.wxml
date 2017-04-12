@@ -8,7 +8,7 @@
                 <view class="home-list-item-right">
                     <view class="home-list-item-voice" style="{{'width:' + (120 + 5 * item.rawDuration) + 'rpx'}}">
                         <view class="home-list-item-voice-dress" />
-                        <view class="{{ which == index + 1 ? 'home-list-item-voice-icon list-voice-img-shake' : 'home-list-item-voice-icon' }}" catchtap="playVoice" data-source="{{item.recordPath}}" data-which="{{index + 1}}"/>
+                        <view class="{{ which == index ? 'home-list-item-voice-icon list-voice-img-shake' : 'home-list-item-voice-icon' }}" bindtap="playVoice" data-source="{{item.recordPath}}" data-which="{{index + ''}}" data-raw-duration="{{item.rawDuration}}"/>
                         <text class="home-list-item-voice-duration">{{item.duration}}</text>
                     </view>
                 </view>
