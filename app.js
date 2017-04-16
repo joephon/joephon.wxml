@@ -4,8 +4,8 @@ import checkToken from './utils/checkToken'
 const { dispatch, subscribe } = store
 
 App({
-  onLaunch() {
-    checkToken()
+  onLaunch(res) {
+    checkToken(res)
   },
   store,
   dispatch,
