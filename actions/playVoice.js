@@ -4,7 +4,8 @@ import store from '../common/store'
 
 export default e => {
     const { source, which, rawDuration } = e.target.dataset
-    stopPlay()
+        , currentWhich = store.getState().home.which
+    if(which == currentWhich) return stopPlay()
     downloadFile(source, which, rawDuration)
 }
 
